@@ -1,0 +1,101 @@
+/* ==========================================================================
+   general styles
+   ========================================================================== */
+.clearfix::after {
+    visibility: hidden;
+    display: block;
+    content: '';
+    clear: both;
+    height: 0;
+}
+
+/* IE7 */
+* html .clearfix {
+    zoom: 1;
+}
+
+/* IE6 */
+*:first-child+html .clearfix {
+    zoom: 1;
+}
+
+
+
+/* ==========================================================================
+   style for dropdown menu
+   ========================================================================== */
+
+/*make header appear on top of other content*/
+header#navbar {
+    position: relative;
+    z-index: 1;
+}
+
+/*some general rules for menu and bgc for top menu bar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #444;
+}
+
+/*float items to left*/
+li {
+    float: left;
+    display: inline-block;
+}
+
+/*styles for top menu items*/
+ul#top-menu  a {
+    display: inline-block;
+    color: #ffd;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+ul#top-menu li a:hover {
+    background-color: #a99;
+}
+
+/*default style for the submenu*/
+ul.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #eeb;
+    min-width: 160px;
+    -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+ul#top-menu ul.sub-menu li {
+    display: block;
+    float: none;
+}
+
+ul#top-menu ul.sub-menu a {
+    display: block;
+    text-align: left;
+    color: #644;
+}
+
+ul#top-menu ul.sub-menu a:hover {
+    background-color: #cc9;
+}
+
+
+li.top-menu-dropdown:hover ul.sub-menu {
+    display: block;
+}
+
+/* ==========================================================================
+   style for main content
+   ========================================================================== */
+
+/*just for testing purposes
+to see if navbar with its submenus renders above it*/
+main {
+    position: absolute;
+}
